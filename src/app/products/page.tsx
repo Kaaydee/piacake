@@ -1,10 +1,11 @@
 'use client';
 
-import Homepage from '@/app/component/pages/homepage';
+// import Homepage from '@/app/component/pages/homepage';
+import ProductsList from '@/app/component/pages/products/productslist';
 import axios from 'axios';
-import { Fragment, useEffect, useState } from "react";
+import {  useEffect, useState } from "react";
 
-const Home = () => {
+const Products = () => {
   const [data, setData] = useState(null);
 
   useEffect(() => {
@@ -25,12 +26,13 @@ const Home = () => {
 
     fetchData();
   }, []);
-
+ 
   return (
-    <Fragment>
-      {data && <Homepage data={JSON.stringify(data)} />}
-    </Fragment>
+    <div className='container my-14'>
+        <h1 className='text-2xl font-semibold mb-8  '>Tất cả sản phẩm </h1>
+      {data && <ProductsList data={JSON.stringify(data)} />}
+    </div>
   );
 };
 
-export default Home;
+export default Products;
