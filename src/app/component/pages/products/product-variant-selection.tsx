@@ -54,7 +54,7 @@ export default function ProductVariantSelection(props: { product: any }) {
                 ) : (
                   <div />
                 )}
-                <div className=" pl-4 pr-4 absolute w-full bottom-0 left-0 bg-gray-500 text-white text-xs flex justify-between">
+                <div className="pl-4 pr-4 absolute w-full bottom-0 left-0 bg-gray-500 text-white text-xs flex justify-between">
                   <div title={variant.variant_name}>    
                     <p className="line-clamp-1">{variant.variant_name}</p>
              
